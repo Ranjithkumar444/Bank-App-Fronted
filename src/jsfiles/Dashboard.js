@@ -14,9 +14,9 @@ const Dashboard = () => {
     const [accountDetails, setAccountDetails] = useState(
       JSON.parse(localStorage.getItem("accountDetails")) || null
     );
-    const [loading, setLoading] = useState(!accountDetails); // Only load if data is not in localStorage
+    const [loading, setLoading] = useState(!accountDetails); 
   
-    const hasFetched = useRef(false); // Prevent multiple API calls
+    const hasFetched = useRef(false);
   
     useEffect(() => {
       if (!token) {
@@ -64,11 +64,10 @@ const Dashboard = () => {
           <p>Loading...</p>
         ) : accountDetails ? (
           <>
-            <p className="dashboard-acc-name">Account Name : {accountDetails.firstName + " " +  accountDetails.lastName}</p>
+            <p className="welcome">Welcome{"," +" " + accountDetails.firstName + " " + accountDetails.lastName }</p>
 
-            <p className="dashboard-acc-email">Email: {accountDetails.email}</p>
             <p className="dashboard-acc-num">Account Number: {accountDetails.accountNumber}</p>
-            <p className="dashboard-acc-balance">Balance: ${accountDetails.accountBalance}</p>
+            
           </>
         ) : null}
       </div>
