@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { loginUser } from "../services/auth";
 import { useNavigate } from "react-router-dom";
+import loginImage from "../img-files/bankbaground.jpg";
 
 const Login = ({ setUser }) => {
   const [formData, setFormData] = useState({ email: "", password: "" });
@@ -30,7 +31,7 @@ const Login = ({ setUser }) => {
           navigate("/dashboard");
       } catch (error) {
           console.log("Login Error:", error.response?.data);
-          setError(error.response?.data?.message || "Login failed!");
+          setError(error.response?.data?.message || "Invalid Credential. Login failed!");
       } finally {
           setLoading(false);
       }
@@ -39,7 +40,11 @@ const Login = ({ setUser }) => {
   return (
     <div className="login-main">
 
-      <h2 className="login">Login</h2>
+      <img src={loginImage} alt="Login Image" className="login-image"></img>
+
+      <h2 className="bank-name">Ind Bank</h2>
+
+      <h3 className="login">Login</h3>
 
       {error && <p className="login-err">{error}</p>}
       

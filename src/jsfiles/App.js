@@ -61,7 +61,7 @@ const App = () => {
     return (
         <BrowserRouter>
             <div>
-                {userState && <button onClick={handleLogout}>Logout</button>}
+                
                 <Routes>
                     <Route path="/" element={userState ? <Navigate to="/dashboard" /> : <Navigate to="/login" />} />
                     <Route path="/signup" element={userState ? <Navigate to="/dashboard" /> : <Signup />} />
@@ -76,6 +76,7 @@ const App = () => {
                     />
                     <Route path="*" element={<Navigate to={userState ? '/dashboard' : '/login'} />} />
                 </Routes>
+                {userState && <button onClick={handleLogout} className='logout'>Logout</button>}
             </div>
         </BrowserRouter>
     );
