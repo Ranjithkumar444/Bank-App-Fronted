@@ -67,6 +67,8 @@ const Dashboard = () => {
             <p className="welcome">Welcome{"," +" " + accountDetails.firstName + " " + accountDetails.lastName }</p>
 
             <p className="dashboard-acc-num">Account Number: {accountDetails.accountNumber}</p>
+
+            <button  onClick={() => navigate("/withdraw")} className="withdraw-btn">Withdraw</button>
             
           </>
         ) : null}
