@@ -148,3 +148,24 @@
     margin-top: 30px;
     font-size: larger;
 }
+
+.withdraw-btn{
+    margin-left: 400px;
+    font-size: large;
+    margin-top: 40px;
+}
+
+.withdraw-main{
+    margin-left: 600px;
+    margin-top: 150px;
+}
+
+.withdraw-passcode,.withdraw-amount{
+    display: block;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.withdraw-submit-btn{
+    margin-top: 30px;
+}

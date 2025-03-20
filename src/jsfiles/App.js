@@ -5,6 +5,7 @@ import Login from './Login';
 import Signup from './SignUp';
 import Dashboard from './Dashboard';
 import CreateAccount from './Create-Account';
+import Withdraw from './Withdraw';
 
 const App = () => {
     const storedUser = localStorage.getItem('user');
@@ -75,6 +76,7 @@ const App = () => {
                         element={userState ? (accountExists ? <Navigate to="/dashboard" /> : <CreateAccount />) : <Navigate to="/login" />}
                     />
                     <Route path="*" element={<Navigate to={userState ? '/dashboard' : '/login'} />} />
+                    <Route path="/withdraw" element={<Withdraw />} />
                 </Routes>
                 {userState && <button onClick={handleLogout} className='logout'>Logout</button>}
             </div>
