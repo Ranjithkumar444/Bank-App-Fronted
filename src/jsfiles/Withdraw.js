@@ -21,9 +21,9 @@ const Withdraw = () => {
 
     try {
       const response = await withdrawAmount(withdrawData, token);
-      console.log("Withdrawal successful!", response.data);
-      alert("Withdrawal successful! New balance: " + response.data.newBalance);
-      navigate("/dashboard"); // Navigate back to dashboard after success
+      console.log(response.data);
+      alert(response.data)
+      navigate("/dashboard");
     } catch (error) {
       console.error("Withdrawal failed", error.response?.data || error.message);
       alert("Withdrawal failed: " + (error.response?.data?.message || error.message));
