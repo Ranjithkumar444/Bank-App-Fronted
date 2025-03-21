@@ -26,3 +26,9 @@ export const withdrawAmount = async (withdrawData, token) => {
     headers: { Authorization: `Bearer ${token}` },
   });
 };
+
+export const creditAmount = async (creditData,token) => {
+  return await axios.post(`${API_BANK_URL}/credit`,creditData,{
+    headers: { Authorization: `Bearer ${token}`},
+  });
+}

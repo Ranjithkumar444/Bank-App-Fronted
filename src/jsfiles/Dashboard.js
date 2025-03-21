@@ -69,6 +69,8 @@ const Dashboard = () => {
             <p className="dashboard-acc-num">Account Number: {accountDetails.accountNumber}</p>
 
             <button  onClick={() => navigate("/withdraw")} className="withdraw-btn">Withdraw</button>
+
+            <button onClick={() => navigate("/credit")} className="credit-btn">Credit</button>
             
           </>
         ) : null}
