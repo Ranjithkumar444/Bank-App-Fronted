@@ -71,6 +71,8 @@ const Dashboard = () => {
             <button  onClick={() => navigate("/withdraw")} className="withdraw-btn">Withdraw</button>
 
             <button onClick={() => navigate("/credit")} className="credit-btn">Credit</button>
+
+            <button onClick={() => navigate("/transfer")} className="transfer-btn">Transfer</button>
             
           </>
         ) : null}

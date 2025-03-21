@@ -32,3 +32,9 @@ export const creditAmount = async (creditData,token) => {
     headers: { Authorization: `Bearer ${token}`},
   });
 }
+
+export const transferAmount = async (transferData,token) => {
+  return await axios.post(`${API_BANK_URL}/transfer`,transferData,{
+    headers: { Authorization: `Bearer ${token}`},
+  });
+}
