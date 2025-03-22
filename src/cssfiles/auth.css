@@ -150,7 +150,7 @@
 }
 
 .withdraw-btn{
-    margin-left: 400px;
+    margin-left: 300px;
     font-size: large;
     margin-top: 40px;
 }
@@ -164,6 +164,7 @@
     display: block;
     flex-direction: column;
     margin-top: 20px;
+    font-size: large;
 }
 
 .withdraw-submit-btn{
@@ -204,5 +205,75 @@
     flex-direction: column;
     margin-top: 30px;
     margin-left: 70px;
+    font-size: large;
+}
+
+.transfer-btn{
+    margin-left: 200px;
+    font-size: large;
+}
+
+.transfer-main{
+    margin-left: 500px;
+    margin-top: 150px;
+    border: solid;
+    margin-right: 500px;
+}
+
+.transfer-amount,.transfer-passcode,.transfer-to,.transfer-from{
+    display: block;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: large;
+    margin-left: 80px;
+}
+
+.transfer-submit-btn{
+    margin-left: 150px;
+    font-size: large;
+    margin-bottom: 20px;
+}
+
+.transfer-header{
+    margin-left: 80px;
+    font-size: 30px;
+}
+
+.balance-main{
+    margin-left: 500px;
+    border: solid;
+    margin-right: 500px;
+    margin-top: 200px;
+}
+
+.balance-header{
+    margin-left: 120px;
+}
+
+.balance-passcode{
+    display: block;
+    flex-direction: column;
+    margin-left: 100px;
+    margin-top: 20px;
+    font-size: large;
+}
+
+.balance-submit-btn{
+    margin-left: 150px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: large;
+}
+
+.balance-show{
+    margin-left: 130px;
+    font-size: medium;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.balance-btn{
+    margin-left: 200px;
     font-size: large;
 }

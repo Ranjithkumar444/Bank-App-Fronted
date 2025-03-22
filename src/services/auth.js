@@ -38,3 +38,9 @@ export const transferAmount = async (transferData,token) => {
     headers: { Authorization: `Bearer ${token}`},
   });
 }
+
+export const balanceCheck = async (balanceData,token) => {
+  return await axios.post(`${API_BANK_URL}/balance`,balanceData,{
+    headers: { Authorization: `Bearer ${token}`},
+  });
+}
