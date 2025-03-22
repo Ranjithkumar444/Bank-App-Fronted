@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { withdrawAmount } from "../services/auth"; // Import the withdraw function
-
+import { withdrawAmount } from "../services/auth"; 
 const Withdraw = () => {
   const [passcode, setPasscode] = useState("");
   const [amount, setAmount] = useState("");

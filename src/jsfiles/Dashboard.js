@@ -39,7 +39,7 @@ const Dashboard = () => {
         .then((response) => {
           if (response.status === 200) {
             if (response.data.message === "No bank account found. Please create one.") {
-              navigate("/create-account"); // Redirect to CreateAccount
+              navigate("/create-account"); 
             } else {
               const { email, accountNumber, accountBalance } = response.data;
               setAccountDetails({ email, accountNumber, accountBalance });
@@ -73,6 +73,8 @@ const Dashboard = () => {
             <button onClick={() => navigate("/credit")} className="credit-btn">Credit</button>
 
             <button onClick={() => navigate("/transfer")} className="transfer-btn">Transfer</button>
+
+            <button onClick={() => navigate("/balance")} className="balance-btn">Balance</button>
             
           </>
         ) : null}

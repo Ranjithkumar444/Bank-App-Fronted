@@ -8,6 +8,7 @@ import CreateAccount from './Create-Account';
 import Withdraw from './Withdraw';
 import Credit from './credit';
 import Transfer from './transfer';
+import Balance from './balance';
 
 const App = () => {
     const storedUser = localStorage.getItem('user');
@@ -49,7 +50,7 @@ const App = () => {
         } else {
             setLoading(false);
         }
-    }, [userState]); // Use userState as a dependency
+    }, [userState]);
 
     const handleLogout = () => {
         setUser(null);
@@ -81,6 +82,7 @@ const App = () => {
                     <Route path="/withdraw" element={<Withdraw />} />
                     <Route path="/credit" element={<Credit/>}></Route>
                     <Route path="/transfer" element={<Transfer/>}></Route>
+                    <Route path="/balance" element={<Balance/>}></Route>
                 </Routes>
                 {userState && <button onClick={handleLogout} className='logout'>Logout</button>}
             </div>
