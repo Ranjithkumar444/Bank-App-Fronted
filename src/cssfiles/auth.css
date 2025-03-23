@@ -277,3 +277,44 @@
     margin-left: 200px;
     font-size: large;
 }
+
+.transaction-history-btn{
+    display: block;
+    margin-left: 650px;
+    margin-top: 60px;
+}
+
+.transaction-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.transaction-table th, .transaction-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.transaction-table th {
+    background-color: #f4f4f4;
+}
+
+.transhistory-accnumber,.transhistory-passcode{
+    margin-left: 600px;
+    display: block;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: large;
+}
+
+.transhistory-header{
+    margin-left: 600px;
+
+}
+
+.transhistory-submit-btn{
+    margin-left: 610px;
+    font-size: large;
+}

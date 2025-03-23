@@ -11,7 +11,6 @@ const Balance = () => {
     const handleBalance = async () => {
         if (!token) {
             alert("User not Authenticated");
-            console.log("User not Authenticated");
             return;
         }
 
@@ -23,7 +22,9 @@ const Balance = () => {
 
             if (response.data) {
                 setBalance(response.data.balance || response.data);
-                console.log("Balance Updated:", response.data.balance || response.data);
+                setTimeout(() => {
+                    navigate("/dashboard")
+                },5000);
             } else {
                 alert("Balance response is invalid.");
             }

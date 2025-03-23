@@ -9,6 +9,7 @@ import Withdraw from './Withdraw';
 import Credit from './credit';
 import Transfer from './transfer';
 import Balance from './balance';
+import TransactionHistory from './trasactionhistroy';
 
 const App = () => {
     const storedUser = localStorage.getItem('user');
@@ -83,6 +84,7 @@ const App = () => {
                     <Route path="/credit" element={<Credit/>}></Route>
                     <Route path="/transfer" element={<Transfer/>}></Route>
                     <Route path="/balance" element={<Balance/>}></Route>
+                    <Route path='/transaction-history' element={<TransactionHistory/>}></Route>
                 </Routes>
                 {userState && <button onClick={handleLogout} className='logout'>Logout</button>}
             </div>

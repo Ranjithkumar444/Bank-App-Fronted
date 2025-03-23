@@ -4,6 +4,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 
+
 const Dashboard = () => {
     const navigate = useNavigate();
     const token = localStorage.getItem("token");
@@ -17,6 +18,8 @@ const Dashboard = () => {
     const [loading, setLoading] = useState(!accountDetails); 
   
     const hasFetched = useRef(false);
+
+    console.log(token);
   
     useEffect(() => {
       if (!token) {
@@ -75,6 +78,8 @@ const Dashboard = () => {
             <button onClick={() => navigate("/transfer")} className="transfer-btn">Transfer</button>
 
             <button onClick={() => navigate("/balance")} className="balance-btn">Balance</button>
+
+            <button onClick={() => navigate("/transaction-history")}  className="transaction-history-btn">Transaction-History</button>
             
           </>
         ) : null}
