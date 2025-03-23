@@ -27,7 +27,7 @@ const Credit = () => {
             navigate("/dashboard");
         }   
         catch(error){
-            console.error("Withdrawal failed", error.response?.data || error.message);
+
             alert("Withdrawal failed: " + (error.response?.data?.message || error.message));
         }
     };

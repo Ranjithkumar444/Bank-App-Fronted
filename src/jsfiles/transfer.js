@@ -4,7 +4,6 @@ import { transferAmount } from "../services/auth";
 
 
 const Transfer = () => {
-    const[fromAccountNumber,setfromAccountNumber] = useState("");
     const[toAccountNumber,settoAccountNumber] = useState("");
     const[passcode,setPasscode] = useState("");
     const[amount,setAmount] = useState("");
@@ -20,7 +19,6 @@ const Transfer = () => {
             passcode,
             amount: parseFloat(amount),
             toAccountNumber: parseInt(toAccountNumber),
-            fromAccountNumber : parseInt(fromAccountNumber)
         }
 
         try{
@@ -40,8 +38,7 @@ const Transfer = () => {
 
         <div className="transfer-main">
             <h2 className="transfer-header">Transfer Amount</h2>
-
-            <input type="number" className="transfer-from" placeholder="From" onChange={(e) => setfromAccountNumber(e.target.value)} ></input>
+            
             <input type="number" className="transfer-to" placeholder="To" onChange={(e) => settoAccountNumber(e.target.value)}></input>
             <input type="number" className="transfer-amount" placeholder="Amount" onChange={(e) => {
                 setAmount(e.target.value);

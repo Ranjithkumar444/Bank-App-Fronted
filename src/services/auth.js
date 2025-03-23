@@ -44,3 +44,10 @@ export const balanceCheck = async (balanceData,token) => {
     headers: { Authorization: `Bearer ${token}`},
   });
 }
+
+
+export const transactionHistory = async (transactionData,token) => {
+  return await axios.post(`${API_BANK_URL}/transaction-history`,transactionData,{
+    headers: { Authorization: `Bearer ${token}`},
+  });
+}
